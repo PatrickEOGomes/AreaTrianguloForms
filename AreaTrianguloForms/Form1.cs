@@ -16,5 +16,29 @@ namespace AreaTrianguloForms
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            try {
+                //Ober valores:
+                double n1 = double.Parse(txtAltura.Text);
+                double n2 = double.Parse(txtBase.Text);
+                //Mostrar resultados:
+                txtResultado.Text = (n1 * n2 / 2).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Dados invadidos onformados!!");
+                // Limpar txt:
+                txtAltura.Clear();
+                txtBase.Clear();
+                txtResultado.Clear();
+            }
+            }
     }
 }
